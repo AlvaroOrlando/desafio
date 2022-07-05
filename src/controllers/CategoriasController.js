@@ -16,5 +16,11 @@ module.exports = {
     async getAll(req,res) {
         const categorias = await Categorias.findAll();
         return res.json(categorias);
+    },
+    async update(req,res) {
+        const { id } = req.params;
+        const { codigo, titulo, status } = req.body;
+        const categorias = await Categorias.update({ codigo, titulo, status }, { where: { id } });
+        return res.json(categorias);
     }
 };
