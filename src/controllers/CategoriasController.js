@@ -12,5 +12,9 @@ module.exports = {
         const categorias = await Categorias.findByPk(id);
 
         return res.json(categorias);
+    },
+    async getAll(req,res) {
+        const categorias = await Categorias.findAll();
+        return res.json(categorias);
     }
 };
