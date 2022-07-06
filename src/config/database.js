@@ -12,7 +12,6 @@ module.exports = {
     password,
     define: {
         timestamps: true,
-        underscored: true,
     },
 };
 
