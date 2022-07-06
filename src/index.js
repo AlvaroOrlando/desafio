@@ -1,6 +1,11 @@
 const express = require('express');
 const app = express();
 
+//postgres
+const client = require('./config/dabatasePG');
+client.connect(console.log('Postgres connected'));
+
+//mysql 
 require('./database');
 
 //enviroment variables
@@ -12,7 +17,12 @@ app.use(express.json());
 
 //routes
 const categoriasRoutes = require('./routes/categoriasRoutes');
+const produtosRoutes = require('./routes/produtosRoutes');
 app.use('/categorias', categoriasRoutes);
+app.use('/produtos', produtosRoutes);
+
+//shedule
+require('./schedule/schedule');
 
 
 //server
