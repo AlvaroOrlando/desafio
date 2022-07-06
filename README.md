@@ -15,6 +15,8 @@ MySQL_DB_PASSWORD // seu password do MySQL
 
 . rodar npx sequelize db:create
 . rodar npx sequelize db:migrate
+.rodar npm install para instalar tadas as dependências
+.rodar npm run dev
 
 .Cadastre categorias, produtos e estoque por alguma ferramenta cliente de API REST (Postman, Insomnia).
 .De 1 em um minuto o banco de dados multiplier do MySQL irá atualizar o banco de dados multiplier Postgres
